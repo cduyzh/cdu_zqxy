@@ -1,1 +1,595 @@
-<h1>asdadaasd</h1>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/video-js.css" rel="stylesheet" type="text/css">
+    <!--标题栏：-->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!--收藏夹：-->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="./js/video.js"></script>
+    <!--<script>-->
+    <!--videojs.options.flash.swf = "video-js.swf";-->
+    <!--</script>-->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>
+        足球学院</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/nivo-slider.css" media="screen">
+    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+        //Slider
+        jQuery(window).load(function() {
+            jQuery('#slider').nivoSlider({
+                effect: 'fold',
+                slices: 15,
+                animSpeed: 500, //Slide transition speed
+                pauseTime: 5000,
+                controlNav: false,
+                directionNavHide: false,
+                prevText: 'prev',
+                nextText: 'next',
+                startSlide: 0, //Set starting Slide (0 index)
+                directionNav: true, //Next &amp; Prev
+                afterLoad: function() {
+                    jQuery(".nivo-caption").animate({
+                        top: "60"
+                    }, {
+                        easing: "easeOutBack",
+                        duration: 500
+                    })
+                },
+                beforeChange: function() {
+                    jQuery(".nivo-caption").animate({
+                        top: "-300"
+                    }, {
+                        easing: "easeInBack",
+                        duration: 500
+                    })
+                },
+                afterChange: function() {
+                    jQuery(".nivo-caption").animate({
+                        top: "60"
+                    }, {
+                        easing: "easeOutBack",
+                        duration: 500
+                    })
+                }
+            });
+
+        });
+    </script>
+    <link rel="stylesheet" href="../视频播放插件/video-js.css">
+</head>
+
+<body>
+    <!--顶部LOGO图-->
+    <div class="nav-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 tit ">
+                    <div class="head-img">
+                        <img src="./images/logo3_1.png">
+                    </div>
+                    <div class="head-bg">
+                        <img src="./imags/top_bg.gif">
+                    </div>
+                    <div style="margin-top: 10px;float: right;margin-right: 134px">
+                        <a target="blank" href="http://www.cdu.edu.cn/">学校首页</a>
+                        <a href="javascript:void(0)" onclick="SetHome(this,window.location)">|&nbsp;设为首页&nbsp;|</a>
+                        <a href="javascript:void(0)" onclick="collect(document.title,window.location)">加入收藏</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--菜单导航-->
+    <div class="header-nav">
+        <div class="header_nav">
+            <ul class="nav_bar">
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">学院概况</a>
+                    <ul class="nav_bar_2">
+                        <li>
+                            <a href="#">学院简介</a>
+                        </li>
+                        <li>
+                            <a href="#">学院领导</a>
+                        </li>
+                        <li>
+                            <a href="#">机构设置</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">师资队伍</a>
+                    <ul class="nav_bar_2">
+                        <li>
+                            <a href="#">师资团队</a>
+                        </li>
+                        <li>
+                            <a href="#">外聘专家</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">人才培养</a>
+                    <ul class="nav_bar_2">
+                        <li>
+                            <a href="#">人才培养方案</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">教育教学</a>
+                    <ul class="nav_bar_2">
+                        <li>
+                            <a href="#">教务信息</a>
+                        </li>
+                        <li>
+                            <a href="#">教学文件</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">训练竞赛</a>
+                    <ul class="nav_bar_2">
+                        <li>
+                            <a href="#">运动队建设文件</a>
+                        </li>
+                        <li>
+                            <a href="#">训练视频</a>
+                        </li>
+                        <li>
+                            <a href="#">精彩图片</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">科学研究</a>
+                    <ul class="nav_bar_2">
+                        <li>
+                            <a href="#">科研团队</a>
+                        </li>
+                        <li>
+                            <a href="#">科研动态</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">合作交流</a>
+                    <ul class="nav_bar_2">
+                        <li>
+                            <a href="#">国际、内合作与交流</a>
+                        </li>
+                        <li>
+                            <a href="#">地方服务</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--轮播图-->
+    <section class="list-news-video">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div id="slider-container">
+                        <div id="slider" class="nivoSlider">
+                            <img title="#htmlcaption1" alt="" src="images/slider.jpg">
+                            <img title="#htmlcaption2" alt="" src="images/slide_1.jpg">
+                            <img title="#htmlcaption3" alt="" src="images/slider.jpg">
+                            <img title="#htmlcaption4" alt="" src="images/slide_1.jpg">
+                        </div>
+                        <!-- #slider -->
+
+                        <div id="htmlcaption1" class="nivo-html-caption">
+                            <span class="sdate">2016年11月1日</span>
+                            <h1>
+                                教育部专家组莅临我校检查学生体质健康测试工作</h1>
+                            <hr>
+                            <p>
+                                为积极落实《国家学生体质健康标准》，全面提高学生身体素质，充分了解学生体质健康现状，11月7日教育部专家组一行12人到我校进行测试抽查复核工作， 此次检查工作是为积极贯彻落实《国务院办公厅转发教育部等部门关于进一步加强学校体育工作若干意见的通知》精神，逐步健全学生体质健康监测制度，推动《国家学生体质健康标准》的全面实施，确保各地上报数据的真实性，使学生体质测试成为评价各学校体育工作和学生体质健康水平的有效手段。 在准备会上，我校副书记、纪委书记易贤文对专家组来我校检查工作表示欢迎，并简要的介绍了学校的基本情况。特别是学生体育活动开展情况。体育学院副院长冉建向专家组汇报了我校近几年围绕提高学生体质所开展的各项工作。
+                                随后专家组在四个年级的学生中随机机抽取了240多名学生进行现场体质测试。进行了50米短跑、立定跳远、引体向上、仰卧起坐、肺活量、中长跑等多个项目的现场考核检测，抽查了学生的体质数据测试记录表，并当场分析、点评了测试的情况。整个测试过程组织紧凑、协调有序、科学规范。 多年来，我校高度重视学生体质健康测试工作，关注学生的身体健康，认真制定并落实体育课程和课外体育活动一体化的阳光体育运动方案，创新体育活动内容、方式和载体，增强体育活动的趣味性和吸引力，组织了系列学生喜闻乐见的阳光体育活动，这对于提高学生身体素质，效果已经显现。借着本次测试复核工作的契机，我校将继续扎实开展各项体育活动，为全面提升我校体育工作水平做出积极贡献。
+                            </p>
+                        </div>
+
+                        <div id="htmlcaption2" class="nivo-html-caption">
+                            <span class="sdate">2016年11月2日</span>
+                            <h1>
+                                我院党总支组织开展教职工政治理论学习</h1>
+                            <hr>
+                            <p>
+                                10月25日下午，体育学院教职工举行政治理论学习，黄沛书记主持学习会议。根据年初制定的学院教职工政治理论学习计划安排，黄沛书记通报了学院在党员和干部中开展反腐及廉政警示教育工作的相关情况，并就上级布置的“领导干部赌博敛财问题专项整治工作”以及樊代明院士《从战士到院士》专题报告等两项内容进行了重点学习。 其中，“领导干部赌博敛财问题专项整治工作”的对象为全校科级及以上干部、系部教研室主任。学习会议上，教职工就《中国共产党廉洁自律准则》、《中国共产党纪律处分条例》、《中国共产党问责条例》、《事业单位人事管理条例》等规章制度进行认真学习，学院各级干部都纷纷表态，做出了不赌博敛财的承诺。黄书记也代表学院党政表示将协助学校进一步畅通举报渠道，并将专项整治工作的监督检查与“两学一做”学习教育第二阶段督查工作相结合。最后，公布了举报电话。
+                                10月15日，中国工程院院士、学校名誉校长樊代明到校做了《从战士到院士》的专题报告，黄书记在学习会议上就樊院士的专题报告做了转述。樊院士以自己的人生经历为主线，围绕个人奋斗和单位发展，做了一个很好的报告。通过学习樊院士专题报告，要求大家从以下几个方面进行认真学习：一是认真学习领会其努力争当世界一流的拼搏精神；二是要认真学习领会其“永远向前走，否定到最后”的创业精神；三是要认真学习领会其“硕士博士，首先战士”的实干精神。通过对樊院士专题报告的学习，各教职工受益匪浅，为以后的工作学习增添了动力。
+                            </p>
+                        </div>
+
+                        <div id="htmlcaption3" class="nivo-html-caption">
+                            <span class="sdate">2016年11月1日</span>
+                            <h1>
+                                教育部王登峰司长一行来我校考察调研</h1>
+                            <hr>
+                            <p>
+                                10月18日上午，教育部体卫艺司司长王登峰一行专程来成都开展全国青少年校园足球调研和学生体质达标情况专项督查工作。上午，市长助理、校党委书记毛志雄专程拜会了王登峰司长，在介绍我校体育工作及校园足球开展情况的同时，重点介绍了在成都市委市政府的大力支持下，我校与成都市体育局、成都市教育局、成都市足协联合共建成都足球学院的情况。会上，王登峰司长充分肯定了高校与地方政府体育、教育等相关职能部门共建足球学院的人才培养模式，建议学校深入开展好此项工作，为高校校园足球发展在助推国家足球战略方面积累更多的宝贵经验和做法。
+                            </p>
+                        </div>
+
+                        <div id="htmlcaption4" class="nivo-html-caption">
+                            <span class="sdate">2016年11月1日</span>
+                            <h1>
+                                我院硕士研究生申报成功</h1>
+                            <hr>
+                            <p>
+                                在学校招生培养部署与学院领导关心及指导下，体育学院硕士研究生申报成功，并于2017年正式招收体育硕士研究生。招生主要包括体育教育和体育经济管理两个方向，具体研究生招生专业将在“中国研究生招生信息网” 体育学院师资力量雄厚，现有专职教师82名。其中，硕士生导师3人，教授3人，副教授15人，讲师25人，博士学位6人、硕士学位 37人、双师型教师43人，并外聘北京大学郝光安教授作为体育学院客座教授。学院现是全国学校体育联盟（体育教育）副主席单位、中国大学生体育协会健美操、艺术体操分会副主席单位、四川省高教学会体育专业委员会主席单位、体育研究分会理事长单位。
+                                体育学院已经有多年成熟的本科教学经验，培养了大批优秀毕业生。2011年与四川师范大学签署协议，共同进行研究生教育，体育学院三位教授也被成都体育学院聘为硕士研究生外聘导师，并且培养了多位优秀硕士研究生。近年来，体育学院引进多位博士。这些都为体育学院培养硕士研究生创造了良好的条件。硕士研究生的培养也能极大地提高体育学院的教学与科研水平，为体育学院的进一步发展创造条件。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="list-news-video">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="row clearfix">
+                        <div class="col-md-8 column">
+                            <div class="row clearfix">
+                                <div class="col-md-6">
+                                    <div class="col-links-wrapper">
+                                        <div class="tit">
+                                            <span class="more">
+                                                <a href="#"
+                                                   target="_blank"><img
+                                                        src="imags/more_1.gif"></a>
+                                        </span>
+                                            <div class="hd">
+                                                <img src="./imags/足球2.png">
+                                                <span><a
+                                                    href="#">新闻资讯</a></span>
+                                            </div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知关于游泳重修、辅导课及补考的通知关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-links-wrapper">
+                                        <div class="tit">
+                                            <span class="more">
+                                                <a href="#"
+                                                   target="_blank"><img
+                                                        src="imags/more_1.gif"></a>
+                                        </span>
+                                            <div class="hd">
+                                                <img src="./imags/足球2.png">
+                                                <span><a
+                                                    href="#">通知公告</a></span>
+                                            </div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关于游泳重修、辅导课及补考的通知</a>
+                                                    <span class="pull-right">2016-11-09</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <div class="tit">
+                                <span class="more">
+                                                <a href="#"
+                                                   target="_blank"><img
+                                                        src="imags/more_1.gif"></a>
+                                        </span>
+                                <div class="hd">
+                                    <img src="./imags/video.png">
+                                    <span><a
+                                        href="#">视频区</a></span>
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                            <div class="col-video-wapper">
+                                <div class="baner-video">
+                                    <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" width="364" height="155" poster="./imags/video-bg.jpg" data-setup="{}">
+                                    <source src="./video/ccck.mp4"
+                                            type='video/mp4'/>
+                                    <track kind="captions"
+                                           src="demo.captions.vtt"
+                                           srclang="en"
+                                           label="English"></track>
+                                    <!-- Tracks need an ending tag thanks to IE9 -->
+                                    <track kind="subtitles"
+                                           src="demo.captions.vtt"
+                                           srclang="en"
+                                           label="English"></track>
+                                    <!-- Tracks need an ending tag thanks to IE9 -->
+                                </video>
+                                </div>
+                                <div class="tit">
+                                    <span class="more">
+                                                <a href="#"
+                                                   target="_blank"><img
+                                                        src="imags/more_1.gif"></a>
+                                        </span>
+                                    <div class="hd">
+                                        <img src="./imags/list.png">
+                                        <span><a
+                                            href="#">视频列表</a></span>
+                                    </div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="video-list">
+                                    <ul>
+                                        <li class="video-list-li">
+                                            <div class="video-list-imag">
+                                                <img src="./images/video-list-1.png">
+                                            </div>
+                                            <div class="video-list-info">
+                                                <strong><a
+                                                    href="#">校企合作--魔力眼镜4D电影预告片预告片</a></strong>
+                                                <span class="pull-right">2016/10/14</span>
+                                                <br>
+                                            </div>
+                                        </li>
+                                        <li class="video-list-li">
+                                            <div class="video-list-imag">
+                                                <img src="./images/video-list-1.png">
+                                            </div>
+                                            <div class="video-list-info">
+                                                <strong><a
+                                                    href="#">校企合作--魔力眼镜4D电影预告片</a></strong>
+                                                <span class="pull-right">2016/10/14</span>
+                                                <br>
+                                            </div>
+                                        </li>
+                                        <li class="video-list-li">
+                                            <div class="video-list-imag">
+                                                <img src="./images/video-list-1.png">
+                                            </div>
+                                            <div class="video-list-info">
+                                                <strong><a
+                                                    href="#">校企合作--魔力眼镜4D电影预告片</a></strong>
+                                                <span class="pull-right">2016/10/14</span>
+                                                <br>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+
+        <div class="footer-bg" style="text-align: center;">
+            <div class="links_bar">
+                <ul class="links_btn">
+                    <li>
+                        <a href="#" title="四川省教育厅"><img src="./imags/四川省教育厅.png" width="120px">
+                        </a>
+                    </li>
+                    <a href="#" title="四川省教育厅">
+                    </a>
+                    <li>
+                        <a href="#" title="四川省教育厅">
+                        </a>
+                        <a href="#" title="四川省体育局"><img src="./imags/四川省体育局.png" width="120px"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="成都市教育局"><img src="./imags/成都市教育局.png" width="120px"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="成都市体育局"><img src="./imags/成都市体育局.png" width="120px"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="中国足球协会"><img src="./imags/中国足球协会.png" width="120px"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="成都市足球协会"><img src="./imags/成都市足球协会.png" width="120px"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="成都大学体育学院"><img src="./imags/成都大学体育学院.png" width="120px"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer">
+                <p>
+                    地址: 成都市外东十陵镇成都大学体育馆&nbsp;&nbsp;邮编：610106&nbsp;&nbsp;电话：028-84616147&nbsp;&nbsp;邮箱：zqxy@cdu.edu.cn
+                </p>
+                <p>
+                    版权所有©成都大学足球学院&nbsp;&nbsp;&nbsp;
+                    <a href="#">后台管理</a>
+                </p>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
