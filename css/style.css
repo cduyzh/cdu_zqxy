@@ -4,14 +4,18 @@
     padding: 0;
     list-style-type: none;
 }
-
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 a,
 img {
     border: 0;
 }
 
 body {
-    font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+    font: 12px/180% Arial, Helvetica, sans-serif, "微软雅黑";
 }
 
 #slider-container {
@@ -45,8 +49,8 @@ body {
 #slider {
     margin: 0px auto;
     width: 1140px;
-    height: 408px;
-    overflow: hidden;
+    height: 380px;
+ 
     position: relative;
     z-index: 9;
 }
@@ -74,70 +78,11 @@ a {
     color: #333;
 }
 
-@charset "UTF-8";
-html {
-    font-size: 62.5%;
-    font-family: '微软雅黑';
-}
-
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-button,
-textarea,
-p,
-blockquote,
-th,
-td,
-hr {
-    margin: 0;
-    padding: 0
-}
-
-body {
-    line-height: 1.333;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "微软雅黑";
-}
-
-li {
-    list-style: none
-}
-
-a:link,
-a:visited {
-    text-decoration: none
-}
-
 
 /*头*/
 
 .nav-head {
-    /*background-color: whitesmoke;*/
+    background-color: white;
 }
 
 .head-bg {
@@ -152,7 +97,7 @@ a:visited {
 
 .head-img img {
     width: 323px;
-    margin-left: 115px;
+    margin-left: 11px;
     padding: 10px;
     padding-bottom: 3px;
 }
@@ -164,7 +109,8 @@ a:visited {
 }
 
 .list-news-video {
-    background-color: #f4f4f4;
+	
+  background-color: #ddddddb3;
 }
 
 .header-nav {
@@ -179,8 +125,8 @@ a:visited {
 }
 
 .nav_bar {
-    padding-left: 100px;
-    width: 1080px;
+   padding-left: 34px;
+    width: 1190px;
     margin: 0 auto;
     background-color: #1565c0;
     list-style: none;
@@ -286,20 +232,22 @@ a:visited {
 }
 
 .col-links-wrapper ul li {
-    padding: 3px 5px 8px 5px;
+   padding: 3px 5px 2px 6px;
+    width: 100%;
+display: inline-block;
 }
 
 .col-links-wrapper ul li a {
-    text-decoration: none;
-    float: left;
-    max-width: 280px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    line-height: 20px;
-    margin-bottom: 10px;
-    padding-left: 5px;
-    transition: border-width 0.2s linear 0s, color 0.2s linear 0s;
+   text-decoration: none;
+float: left;
+max-width: 280px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+line-height: 20px;
+margin-bottom: 4px;
+padding-left: 5px;
+transition: border-width 0.2s linear 0s, color 0.2s linear 0s;
 }
 
 .col-links-wrapper ul li a:hover {
@@ -311,9 +259,10 @@ a:visited {
 }
 
 .col-links-wrapper {
-    height: 552px;
+    height: 324px;
     background-color: white;
     overflow: hidden;
+   box-shadow: -5px -5px 10px #888888;;
 }
 
 .hd span a {
@@ -324,9 +273,13 @@ a:visited {
     font-weight: 400;
     font-weight: 700;
     font-family: "微软雅黑";
+    text-decoration: none;
 }
-
+footer{
+	border-top: 1px solid gray;
+}
 .line {
+	
     margin-top: 2px;
     height: 1px;
     border-bottom: 1px dashed #1565c0;
@@ -361,16 +314,17 @@ a:visited {
 /*视频区列表*/
 
 .baner-video {
-    padding-top: 10px;
-    height: 168px;
-    color: #333;
+
+    height: 280px;
 }
+
 
 .col-video-wapper {
     color: #333;
     overflow: hidden;
     background-color: white;
-    height: 508px;
+    height: 324px;
+    box-shadow: -5px -5px 10px #888888;
 }
 
 
@@ -423,11 +377,12 @@ a:visited {
 
 .video-list {
     margin-top: 10px;
-    border-top: solid 2px #1D1C1C;
+    background: white;
+height: 300px;
 }
 
 .video-list-li {
-    margin-top: 10px;
+    margin-top: 7px;
     border-bottom: 1px dashed #1565c0;
     float: left;
     margin-left: 10px;
@@ -435,23 +390,19 @@ a:visited {
     padding-right: 10px;
 }
 
-.tit {
-    background-color: white;
-}
-
 .video-list-imag {
-    width: 130px;
+    width: 135px;
     height: 80px;
     float: left;
 }
 
 .video-list-imag img {
-    width: 125px;
-    height: 70px;
+    width: 135px;
+    height: 56px;
 }
 
 .video-list-info {
-    width: 200px;
+    width: 194px;
     float: left;
     margin-left: 15px;
     font-size: 12px;
@@ -469,46 +420,48 @@ a:visited {
 /*footer*/
 
 .footer-bg {
-    /*background-color: #E6E6E6;*/
+    background-color: white;
+}
+
+.links_btn img {
+	width:80px;
+	padding:10px;
 }
 
 .footer {
-    background-color: #E6E6E6;
-    border-top: 1px solid gray;
-    clear: both;
-    width: 100%;
-    height: 70px;
-    text-align: center;
-    color: #666666;
+padding-top: 14px;
+background-color: #0099CC;
+
+clear: both;
+width: 100%;
+text-align: center;
+color: white;
+padding-bottom: 10px;
 }
 
 .footer a {
-    color: #666666;
+  color: white;
 }
 
 .links_bar {
-    border-top: 1px solid #d3d3d3;
-    height: 80px;
-    width: 70%;
+ 
     text-align: left;
     margin: 0px auto;
 }
 
-.links_btn {}
-
-.links_btn img {
-    padding: 10px;
-    margin: 10px;
-    margin-left: 50px;
-}
-
 .links_bar li {
     float: left;
+    width:14%;
+    text-align: center;
+}
+.links_bar ul{
+	margin-bottom: 0px;
+	height:100%;
 }
 
 .links_bar li a {
     text-decoration: none;
-    color: #666666;
+
 }
 
 .links_bar select {
@@ -519,6 +472,21 @@ a:visited {
 }
 
 .footer p {
-    padding-top: 10px;
-    font-size: 14px;
+   font-size: 14px;
+height: 14px;
+line-height: 14px;
+}
+
+.tit {
+    background-color: white;
+}
+/*重写bootstrap*/
+.col-md-4{
+	margin-bottom:20px;
+}
+/* 顶字图标样式 */
+.list-unstyled li img{
+	    margin-bottom: 3.5px;
+    display: inline-block;
+    padding-left: 5px;
 }
